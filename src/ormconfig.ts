@@ -1,20 +1,21 @@
-import { ConnectionOptions } from "typeorm";
+import { ConnectionOptions } from 'typeorm'
+import { TYPE, HOST, PORT, USERNAME, PASSWORD, DATABASE } from './contstants'
 
 export default {
-  type: "postgres",
-  host: process.env.DB_HOST,
-  port: process.env.DB_PORT,
-  username: process.env.DB_USERNAME,
-  password: process.env.DB_PASSWORD,
-  database: process.env.DB_NAME,
-  synchronize: true,
-  logging: false,
-  entities: [
-    `./${process.env.BUILD ? "bin" : "src"}/entity/*.${
-      process.env.BUILD ? "js" : "ts"
-    }`,
-  ],
-  cli: {
-    entitiesDir: `./${process.env.BUILD ? "bib" : "src"}/entity`,
-  },
-} as ConnectionOptions;
+    type: TYPE,
+    host: HOST,
+    port: PORT,
+    username: USERNAME,
+    password: PASSWORD,
+    database: DATABASE,
+    synchronize: true,
+    logging: false,
+    entities: [
+        `./${process.env.BUILD ? 'bin' : 'src'}/entity/*.${
+            process.env.BUILD ? 'js' : 'ts'
+        }`,
+    ],
+    cli: {
+        entitiesDir: `./${process.env.BUILD ? 'bin' : 'src'}/entity`,
+    },
+} as ConnectionOptions
