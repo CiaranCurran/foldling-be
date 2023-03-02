@@ -8,6 +8,7 @@ export default {
     username: USERNAME,
     password: PASSWORD,
     database: DATABASE,
+    ssl: true,
     synchronize: true,
     logging: false,
     entities: [
