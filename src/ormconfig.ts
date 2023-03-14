@@ -1,5 +1,5 @@
 import { ConnectionOptions } from 'typeorm'
-import { TYPE, HOST, PORT, USERNAME, PASSWORD, DATABASE } from './contstants'
+import { TYPE, HOST, PORT, USERNAME, PASSWORD, DATABASE } from './constants'
 
 export default {
     type: TYPE,
@@ -11,12 +11,8 @@ export default {
     ssl: true,
     synchronize: true,
     logging: false,
-    entities: [
-        `./${process.env.BUILD ? 'bin' : 'src'}/entity/*.${
-            process.env.BUILD ? 'js' : 'ts'
-        }`,
-    ],
+    entities: ['./entity/*.js'],
     cli: {
-        entitiesDir: `./${process.env.BUILD ? 'bin' : 'src'}/entity`,
+        entitiesDir: `./entity`,
     },
 } as ConnectionOptions

@@ -184,7 +184,9 @@ const Mutations = new GraphQLObjectType({
     },
 })
 
-export default new GraphQLSchema({
+const schema = new GraphQLSchema({
     query: rootQuery,
     mutation: Mutations,
 })
+
+export default schema
