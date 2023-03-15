@@ -11,8 +11,8 @@ export default {
     ssl: true,
     synchronize: true,
     logging: false,
-    entities: ['./entity/*.js'],
+    entities: ['./dist/entity/*.js'],
     cli: {
-        entitiesDir: `./entity`,
+        entitiesDir: `./dist/entity`,
     },
 } as ConnectionOptions
